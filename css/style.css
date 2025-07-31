@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff6f91, #ff9a8b);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #ff4d6d;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.hero {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.hero-image:hover {
+    transform: scale(1.05);
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff4d6d;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background 0.3s, transform 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #e63950;
+    transform: translateY(-2px);
+}
+
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.game-container {
+    text-align: center;
+}
+
+.member-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+    animation: zoomIn 0.5s ease-in-out;
+}
+
+#guess-input {
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    border: 2px solid #ff4d6d;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    transition: border-color 0.3s;
+}
+
+#guess-input:focus {
+    border-color: #e63950;
+    outline: none;
+}
+
+#result-message {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #ff4d6d;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .member-image {
+        max-width: 80%;
+    }
+}
